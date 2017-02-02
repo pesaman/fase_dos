@@ -1,0 +1,22 @@
+#método que usa yield para llamar al bloque 
+def average_grade
+  yield
+end
+
+#método para calcular el promedio de calificaciones
+def average_grade(grades)
+  count = 0
+  average = 0
+  grades.each{ |grade|
+     average += grade
+     count += 1
+  }
+ p average.to_f / count
+end
+
+hora  = Time.new   #  El momento que se ejecutó esta código
+hora2 = hora + 7.6  #  Un minuto más tarde.
+puts"------------Time started----------"
+puts "Start time: #{hora}"
+puts "End time:  #{hora}"
+puts"------------Time finished-----------"
